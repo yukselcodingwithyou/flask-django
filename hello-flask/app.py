@@ -8,5 +8,11 @@ def hello():
     return "Hello, World!"
 
 
+@hello_flask.route('/<name>')
+def hello_name(name):
+    return "Hello {}!".format(name)
+
+
 if __name__ == '__main__':
     hello_flask.run(port=8080)
+
