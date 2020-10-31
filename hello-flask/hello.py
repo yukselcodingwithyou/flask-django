@@ -14,5 +14,11 @@ def hello_name(name):
 
 
 if __name__ == '__main__':
-    hello_flask.run(port=8080, debug=True)
+    """
+     In case you dockerized the app, you should give host as '0.0.0.0'
+     since Flask is binding to localhost (127.0.0.1) and that will only
+     be reachable from within the container, see the link below for more info.
+     https://devops.stackexchange.com/questions/3380/dockerized-flask-connection-reset-by-peer
+    """
+    hello_flask.run(host="0.0.0.0", port=5000, debug=True)
 
