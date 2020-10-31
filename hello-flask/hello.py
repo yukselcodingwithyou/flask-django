@@ -14,5 +14,5 @@ def hello_name(name):
 
 
 if __name__ == '__main__':
-    hello_flask.run(port=8080, debug=True)
+    hello_flask.run(host="0.0.0.0", port=5000, debug=True)
 
